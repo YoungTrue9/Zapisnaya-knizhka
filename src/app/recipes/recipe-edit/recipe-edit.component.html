@@ -1,0 +1,138 @@
+<div class="row">
+  <div class="col-xs-12">
+    <form
+      [formGroup]="recipeForm"
+      (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-12">
+          <div class="btn-toolbar">
+            <button
+              type="submit" [disabled]="!recipeForm.valid" 
+              class="btn form-buttons">Сохранить</button>
+            <button
+              type="button"(click)="onCancel()"
+              class="btn form-buttons">Отмена</button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="mb-3">
+            <label for="name" class="form-label">Название блюда</label>
+            <input
+            required
+            placeholder="блюдо"
+              formControlName="name"
+              type="text" id="name"
+              class="form-control" />
+          </div>
+          <div class="mb-3">
+            <label for="imagePath" class="form-label">Фотография</label>
+            <input 
+            placeholder='ссылка на фотографию формата " https:// "'
+            pattern="https://.+"  
+            required 
+              formControlName="imagePath"
+              #imagePath
+              type="url" id="imagePath"
+              class="form-control" />
+          </div>
+          <div class="mb-3">
+            <img
+              [src]="imagePath.value"
+              class="img-fluid" style="max-height: 100px;" />
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">Описание</label>
+            <textarea
+            required
+            placeholder="глубокий и развернутый смысл данного блюда"
+              formControlName="description"
+              id="description"
+              class="form-control" rows="6" maxlength="250"
+            ></textarea>
+          </div>
+
+
+          <div class="mb-3">
+            <label for="cooking" class="form-label">Шаги приготовления</label>
+            <textarea
+            required
+            placeholder="Мы готовим, мы готовим, значит мы готовим"
+              formControlName="cooking"
+              id="cooking"
+              class="form-control" rows="6" maxlength="250"
+            ></textarea>
+          </div>
+
+
+          <div class="row">
+            <div class="col-12">
+              <div class="mb-3">
+                <label for="portion" class="form-label">Количество порций</label>
+                <input
+                required
+                placeholder="12 порций"
+                  formControlName="portion"
+                  type="text" id="portion"
+                  class="form-control" />
+              </div>
+              </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label for="time" class="form-label">Время готовки</label>
+                    <input
+                    required
+                    placeholder="40 минут"
+                      formControlName="time"
+                      type="text" id="time"
+                      class="form-control" />
+                  </div>
+                  </div>
+                  </div>
+
+          <div formArrayName="ingredients">
+            <div
+              *ngFor="let ingredientControl of ingredientControls; let i = index"
+              [formGroupName]="i">
+              <div class="input-group mb-3">
+                <input
+                placeholder="продукт"
+                  formControlName="name"
+                  type="text" class="form-control" />
+                <input
+                placeholder="количество"
+                  formControlName="amount"
+                  type="number" class="form-control"
+                  style="max-width: 20%;" min="0" />
+                <button
+                  type="button"
+                  (click)="onDeleteIngredient(i)"
+                  class="btn btn-outline-danger" >
+                  Удалить
+                </button>
+              </div>
+            </div>
+            <div class="btn-toolbar">
+              <button
+                type="button"
+                (click)="onAddIngredient()"
+                class="btn form-buttons">
+                Добавить ингридиенты 
+              </button>
+              <button
+              type="button"
+              (click)="onDeleteAllIngredient()"
+              class="btn form-buttons">
+              Удалить ингридиенты
+            </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

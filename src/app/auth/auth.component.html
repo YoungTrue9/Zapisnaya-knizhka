@@ -1,0 +1,50 @@
+<ng-template appPlaceholder></ng-template>
+<script type="module" src="/src/firebase.js" defer></script>
+<div class="row center-for-form">
+  <div class="col-xs col-md-6 face_form">
+
+      <form class="face-form"
+        *ngIf="!isLoading; else loadingSpinner" 
+        #authForm="ngForm" 
+        (ngSubmit)="onSubmit(authForm)"> 
+        <!-- <img class="logo_project" src='/src/images/logo.jpg'> -->
+        <h4 class="form-title">Создайте или войдите в свой аккаунт</h4> 
+        <p></p>
+        <div class="mb-3">
+          <label for="email" class="form-label">Ваша почта</label>
+          <input 
+            ngModel name="email" 
+            type="email" id="email"
+            class="form-control"
+            required email />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Ваш пароль</label>
+          <input
+            ngModel name="password"
+            type="password" id="password"
+            class="form-control"
+            required minlength="6" />
+        </div>
+        <div class="form-buttons-container">
+          <button
+          id="submit"
+            type="submit" class="btn form-buttons"
+            [disabled]="!authForm.valid">
+            {{ isLoginMode ? 'Вход' : 'Регистрация' }} 
+          </button>
+          <button
+            (click)="onSwitchMode()"
+            type="button" class="btn form-buttons">
+            Переключение на {{ isLoginMode ? 'Регистрация' : 'Вход' }}
+          </button>
+        </div>
+      </form>
+
+    <ng-template #loadingSpinner>
+      <div class="loading-spinner">
+        <app-loading-spinner></app-loading-spinner>
+      </div>
+    </ng-template>
+  </div>
+</div>

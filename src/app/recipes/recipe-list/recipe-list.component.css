@@ -1,0 +1,45 @@
+
+.form-label{
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.form-buttons{
+  background-color: rgb(123, 87, 207);
+  width: 200px;
+  color: white;
+
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  margin-bottom: 25px;
+}
+
+.form-buttons:hover{
+  background-color: rgb(112, 58, 236);
+  transition-duration: .5s
+}
+
+.text-for-banner{
+  color: white;
+  margin-bottom: 35px;
+}
+
+
+.list-group-item-hover:hover{
+  box-shadow: 0px 5px 10px 5px rgb(181, 178, 178);
+  transition-duration: .5s;
+}
+
+.items{
+  overflow: hidden
+}
+
+.list-group-items.active{
+  z-index: 2;
+  color: white;
+  background-color: rgb(112, 58, 236);
+  border-color: rgb(181, 178, 178);
+}
+

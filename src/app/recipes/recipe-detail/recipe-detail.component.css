@@ -1,0 +1,116 @@
+.cards {
+  --bs-card-spacer-y: 1rem;
+  --bs-card-spacer-x: 1rem;
+  --bs-card-title-spacer-y: 0.5rem;
+  --bs-card-border-width: 1px;
+  --bs-card-border-color: var(--bs-border-color-translucent);
+  --bs-card-border-radius: 0.375rem;
+  --bs-card-box-shadow: ;
+  --bs-card-inner-border-radius: calc(0.375rem - 1px);
+  --bs-card-cap-padding-y: 0.5rem;
+  --bs-card-cap-padding-x: 1rem;
+  --bs-card-cap-bg: rgba(0, 0, 0, 0.03);
+  --bs-card-cap-color: ;
+  --bs-card-height: ;
+  --bs-card-color: ;
+  --bs-card-bg: #fff;
+  --bs-card-img-overlay-padding: 1rem;
+  --bs-card-group-margin: 0.75rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: var(--bs-card-height);
+  word-wrap: break-word;
+  background-color: var(--bs-card-bg);
+  background-clip: border-box;
+  border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+  box-shadow: 2px 1px 4px 3px rgb(167, 167, 167);
+  height: 725px;
+}
+
+.card-img{
+  max-height: 18rem;
+  object-fit: cover;
+  width: 280px;
+  height: 280px;
+  margin: 25px;
+}
+
+.card-brain{
+  width: 400px;
+  margin-top: -40%;
+  margin-left: 43%;
+  height: 357px;
+}
+
+.card-description{
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  font-style: normal;
+  color: rgb(133, 133, 133);
+  text-align: left;
+  margin: 10px;
+}
+
+.card-title{
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+
+  font-size: 30px;
+  text-align: left;
+}
+
+.asdv{
+  text-align: left;
+  margin: 5px;
+  color: rgb(123, 87, 207);
+}
+
+.card-description-time{
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  font-style: normal;
+  color: rgb(66, 208, 58);
+  text-align: left;
+  margin: 10px;
+}
+
+.form-buttons{
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  font-style: normal;
+  background-color: rgb(123, 87, 207);
+  color: white;
+
+  margin-left: 53%;
+}
+
+.form-buttons:hover{
+  background-color: rgb(112, 58, 236);
+} 
+
+.list-group-flushs {
+  border-radius: 0;
+  text-align: left;
+}
+
+.set{
+  margin-top: 77px;
+  margin-left: 25px;
+}
+
+.list-group-item{
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.info_hevi{
+  color: rgb(66, 208, 58);
+}

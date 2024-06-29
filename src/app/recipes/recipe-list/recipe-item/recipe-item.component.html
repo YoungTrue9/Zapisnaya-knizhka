@@ -1,0 +1,12 @@
+<div class="float-starts">
+  <h4 class="title-tovar">{{ recipe.name }}</h4><!-- название которое мы передаем -->
+  <p class="description-tovar">{{ recipe.description }}</p><!-- описание которое мы передаем -->
+</div>
+<span class="float-end">
+  <img
+    class="rounded"
+    style="max-height: 75px;"
+    [src]="recipe.imagePath" [alt]="recipe.name" />
+</span>
+
+

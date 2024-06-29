@@ -1,0 +1,12 @@
+<!-- Основной скилет между двумя приложениями -->
+<div class="banner">  
+
+<div class="row">
+  <div class="col-md-5 catalog-card"> <!-- тут у нас рецепт и список карточек -->
+    <app-recipe-list></app-recipe-list>
+  </div>
+  <div class="col-md-7 info"> <!-- тут выгружаем инфу при открытие карточек -->
+    <router-outlet></router-outlet>
+  </div>
+</div>
+</div> 

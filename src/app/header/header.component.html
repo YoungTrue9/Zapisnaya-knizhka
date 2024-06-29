@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-lg">
+    <div class="navbar-header">
+      <a *ngIf="isAuthenticated" class="navbar-brand" routerLink="/recipes">Записная книжка</a>
+    </div>
+    <!-- Кнопка логотип сайта -->
+    <button
+      class="navbar-toggler" type="button"
+      (click)="collapsed = !collapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Навигация по сайту header -->
+    <div
+      class="navbar-collapse navigator-setting"
+      [class.collapse]="collapsed"
+      (window:resize)="collapsed = true">
+      <ul class="navbar-nav">
+        <li *ngIf="isAuthenticated" class="nav-item">
+          <a
+            class="nav-link form-label"
+            routerLink="/recipes" routerLinkActive="active">
+            Книга рецептов
+          </a>
+        </li>
+        <li *ngIf="isAuthenticated" class="nav-item">
+          <a
+            class="nav-link form-label"
+            routerLink="/shopping-list" routerLinkActive="active">
+            Список покупок
+          </a>
+        </li>
+        <li *ngIf="!isAuthenticated" class="nav-item">
+          <a *ngIf="isAuthenticated"
+            class="nav-link"
+            routerLink="/auth" routerLinkActive="active">
+            Авторизация
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li *ngIf="isAuthenticated" class="nav-item">
+          <a
+            (click)="onLogout()"
+            class="btn nav-link form-buttons" style="cursor: pointer;">
+            Выход
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

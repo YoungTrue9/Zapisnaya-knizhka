@@ -1,0 +1,19 @@
+.title-tovar{
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 20px;
+}
+.description-tovar{
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  font-style: normal;
+  color: rgb(133, 133, 133);
+  width: 345px;
+}
+
+.float-starts{
+  overflow: hidden;
+  padding: 5px;
+}

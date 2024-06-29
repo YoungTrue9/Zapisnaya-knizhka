@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-xs-12">
+    <form
+      #form="ngForm"
+      (ngSubmit)="onSubmit(form)" >
+      <div class="row">
+        <div class="col-sm-5">
+          <label for="name" class="form-label">Название продукта</label>
+          <input
+            ngModel name="name"
+            type="text" id="name"
+            class="form-control"
+            required />
+        </div>
+        <div class="col-sm-2">
+          <label for="amount" class="form-label">Количество продуктов</label>
+          <input
+            ngModel name="amount"
+            type="number" id="amount"
+            class="form-control"
+            required min="0" pattern="^[1-9]+[0-9]*$" />
+        </div>
+        <div class="row">
+          <div class="col-xs-12 btn-toolbar">
+            <button
+              class="btn form_buttons"
+              type="submit" [disabled]="!form.valid" >
+              {{ editMode ? 'Обновить' : 'Добавить' }}
+            </button>
+            <button
+              *ngIf="editMode"
+              (click)="onDeleteItem()"
+              class="btn form_buttons"
+              type="button">
+              Удалить
+            </button>
+            <button
+              (click)="onClearForm()"
+              class="btn form_buttons"
+              type="button">
+              Очистить
+            </button>
+          </div>
+        </div>
+      </div>
+  </form>
+  </div>
+</div>

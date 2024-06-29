@@ -1,0 +1,62 @@
+.btn-toolbar button {
+  min-width: 6rem;
+  margin-right: 0.5rem;
+}
+
+.loading-spinner {
+  text-align: center;
+}
+
+
+.face-form{
+  width: 300px;
+  margin-left: 80%;
+}
+
+.form-buttons-container{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+.form-title{
+  color: rgb(123, 87, 207);
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  
+}
+
+.form-label{
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.form-buttons{
+  background-color: rgb(123, 87, 207);
+  width: 200px;
+  color: white;
+
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.form-buttons:hover{
+  background-color: rgb(112, 58, 236);
+  transition-duration: .5s
+}
+
+.center-for-form{
+  margin-top: 15%;
+}
+
+.logo_project{
+  width: 50px;
+  height: 50px;
+  display:block;
+  background-repeat: no-repeat;
+  background-position: center;
+}

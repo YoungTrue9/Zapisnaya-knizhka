@@ -1,0 +1,25 @@
+<div class="row">
+</div>
+<div class="col-xs-12">
+  <button
+    (click)="onNewRecipe()"
+    class="btn form-buttons">
+    Добавить рецепт ♡
+  </button>
+  <div class="form-label text-for-banner">Отличный день для нового рецепта!</div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="list-group"> <!-- выводим контейнер с записями -->
+      <a
+        *ngFor="let recipeElement of recipes; let i = index"
+        [routerLink]="[i]" routerLinkActive="active"
+        class="list-group-item list-group-item-hover items" style="cursor: pointer;">
+        <app-recipe-item
+          class="d-flex justify-content-between align-items-center"
+          [recipe]="recipeElement">
+        </app-recipe-item>      
+      </a>
+    </div>
+  </div>
+</div>
